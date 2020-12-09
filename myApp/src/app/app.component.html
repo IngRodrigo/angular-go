@@ -14,10 +14,14 @@
       <tr *ngFor="let estudiante of listEstudiantes; let i = index"><!--Se puede agregar let i = index para contar los elementos-->
         <td>{{i+1}}</td>
         <td>{{estudiante.nombre}}</td>
-        <td>{{estudiante.estado}}</td>
+        <td [ngStyle]="{'font-style': estudiante.estado==='aprobado' ? 'italic': 'normal'}">
+          <span [ngClass]="estudiante.estado==='aprobado'? 'badge badge-success':'badge badge-secondary'">
+            {{estudiante.estado}}
+          </span>
+        </td>
       </tr>
     </tbody>
   </table>
   <br>
-  <h3 *ngIf="!mostrar">No hay registros para mostrar</h3>
+  <h3 *ngIf="listEstudiantes.length===0">No hay registros para mostrar</h3>
 </div>

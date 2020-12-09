@@ -13,7 +13,6 @@ export class AppComponent {
   {nombre:"Juan", estado:"Regular"},
   {nombre:"Jorge", estado:"aprobado"}
   ];
-
   mostrar=true;
   
   mostrarLista(){
