@@ -14,10 +14,14 @@ export class AppComponent {
   {nombre:"Jorge", estado:"aprobado"}
   ];
 
-  mostrar=false;
+  mostrar=true;
   
   mostrarLista(){
-    this.mostrar=!this.mostrarLista;
+    if(this.mostrar){
+      this.mostrar=false;
+    }else{
+      this.mostrar=true;
+    }
   }
 
 }
